@@ -6,12 +6,9 @@ public class Main {
 
     public static void main( String[] args ) {
 
-        //String[] message = {"java", "Main", "-mode", "enc", "-key", "5", "-data", "Welcome to hyperskill!", "-alg", "unicode"};
-        String[] message = {"java", "Main", "-mode", "enc", "-in", "road_to_treasure.txt", "-out", "protected.txt", "-key", "5", "-alg", "unicode"};
-
-        MessageChecker messageChecker = new MessageChecker(message);
-        String input = input(messageChecker, message);
-        writeOutput(message, input, messageChecker);
+        MessageChecker messageChecker = new MessageChecker(args);
+        String input = input(messageChecker, args);
+        writeOutput(args, input, messageChecker);
     }
 
     public static String input(MessageChecker messageChecker, String[] input) {
